@@ -7,15 +7,5 @@
 <p>Year Completed: <input type="text" id="landmark_year_completed" name="landmark[year_completed]">
 
 
-<p>
-<p>Select Titles:
-  <% Title.all.each do |title| %>
-  <input type="checkbox" name="figure[title_ids][]" id="title_<%= title.id %>" value="<%=title.id%>"><%=title.name%><br>
-  <%end%>
-
-<p>or Create a new title:
-  <p>New Title: <input type="text" id="new_title" name="title[name]">
-
-
-<p><input type="submit" name="submit" id="Create New Figure" value="Create New Figure">
+<p><input type="submit" name="submit" id="Create New Landmark" value="Create New Landmark">
 </form>
