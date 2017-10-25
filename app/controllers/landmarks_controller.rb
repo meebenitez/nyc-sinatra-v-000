@@ -19,17 +19,11 @@ class LandmarksController < ApplicationController
       @landmark = Landmark.create(params[:landmark])
       #binding.pry
       #binding.pry
-      if !params[:title][:name].empty?
-        @landmark.titles << Title.create(params[:title])
-      end
-
-      if !params[:landmark][:name].empty?
-        @figure.landmarks << Landmark.create(params[:landmark])
-      end
+      
       #binding.pry
-      @figure.save
+      @landmark.save
 
-      redirect to("/figures/#{@figure.id}")
+      redirect to("/landmarks/#{@landmark.id}")
     end
 
     get '/figures/:id' do
