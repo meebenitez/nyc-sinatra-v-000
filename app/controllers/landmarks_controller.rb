@@ -16,11 +16,11 @@ class LandmarksController < ApplicationController
     end
 
     post '/landmarks' do
-      @Landmark = Landmark.create(params[:landmark])
+      @landmark = Landmark.create(params[:landmark])
       #binding.pry
       #binding.pry
       if !params[:title][:name].empty?
-        @figure.titles << Title.create(params[:title])
+        @landmark.titles << Title.create(params[:title])
       end
 
       if !params[:landmark][:name].empty?
