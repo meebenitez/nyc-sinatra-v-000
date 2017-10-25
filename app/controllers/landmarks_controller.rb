@@ -30,12 +30,12 @@ class LandmarksController < ApplicationController
   get '/landmarks/:id/edit' do
     @landmark = Landmark.find(params[:id])
     #binding.pry
-    erb :'/figures/edit'
+    erb :'/landmarks/edit'
   end
 
-  post '/figures/:id' do
-    @figure = Figure.find_by_id(params[:id])
-    @figure.update(params[:figure])
+  post '/landmarks/:id' do
+    @landmark = Landmark.find_by_id(params[:id])
+    @landmark.update(params[:landmark])
     if !params[:title][:name].empty?
       @figure.titles << Title.create(params[:title])
     end
