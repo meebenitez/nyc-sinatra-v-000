@@ -15,8 +15,8 @@ class LandmarksController < ApplicationController
       erb :'landmarks/index'
     end
 
-    post '/figures' do
-      @figure = Figure.create(params[:figure])
+    post '/landmarks' do
+      @Landmark = Landmark.create(params[:landmark])
       #binding.pry
       #binding.pry
       if !params[:title][:name].empty?
